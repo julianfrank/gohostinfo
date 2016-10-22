@@ -13,7 +13,6 @@ import (
 
 //RequestInfoStruct Structure for Request Info
 type RequestInfoStruct struct {
-	Tag        string
 	URL        url.URL
 	Method     string
 	Host       string
@@ -28,7 +27,6 @@ func RequestInfo(r *http.Request) string {
 
 	var rInfo RequestInfoStruct
 
-	rInfo.Tag = "WFE: Server Info Page"
 	rInfo.URL = *r.URL
 	rInfo.Method = r.Method
 	rInfo.Host = r.Host
