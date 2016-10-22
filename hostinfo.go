@@ -2,6 +2,7 @@ package hostinfo
 
 import (
 	"net/http"
+	"net/url"
 	"os"
 )
 
