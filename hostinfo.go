@@ -1,10 +1,14 @@
 package hostinfo
 
 import (
+	"net"
 	"net/http"
 	"net/url"
 	"encoding/json"
 	"os"
+	"bytes"
+	"strings"
+	"strconv"
 )
 
 //RequestInfoStruct Structure for Request Info
