@@ -3,6 +3,7 @@ package hostinfo
 import (
 	"net/http"
 	"net/url"
+	"encoding/json"
 	"os"
 )
 
