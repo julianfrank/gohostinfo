@@ -1,3 +1,13 @@
+package hostinfo
+
+import (
+	"io"
+	"log"
+	"net/http"
+	"os"
+	"time"
+)
+
 //RequestInfoStruct Structure for Request Info
 type RequestInfoStruct struct {
 	Tag        string
