@@ -19,6 +19,7 @@ type RequestInfoStruct struct {
 	RequestURI string
 	Protocol   string
 	Header     map[string]string
+	Cookies    []*http.Cookie
 	RemoteAddr string
 }
 
@@ -36,6 +37,7 @@ func RequestInfo(r *http.Request) string {
 	for k, v := range r.Header {
 		rInfo.Header[k] = v[0]
 	}
+	rInfo.Cookies = r.Cookies()
 	rInfo.RemoteAddr = r.RemoteAddr
 
 	uglyJSON, _ := json.Marshal(rInfo)
